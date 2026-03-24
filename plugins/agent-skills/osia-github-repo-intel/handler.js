@@ -22,7 +22,16 @@ module.exports.runtime = {
         open_issues: data.open_issues_count
       };
       
-      return JSON.stringify(stats, null, 2);
+      return [
+        `Repository: ${stats.full_name}`,
+        `Description: ${stats.description || "N/A"}`,
+        `Language: ${stats.language || "N/A"}`,
+        `Stars: ${stats.stars}`,
+        `Forks: ${stats.forks}`,
+        `Open Issues: ${stats.open_issues}`,
+        `License: ${stats.license}`,
+        `Last Updated: ${stats.last_update}`,
+      ].join("\n");
     } catch (e) {
       return `Error fetching repo intel: ${e.message}`;
     }

@@ -21,7 +21,16 @@ module.exports.runtime = {
         maps: c.maps.googleMaps
       };
       
-      return JSON.stringify(info, null, 2);
+      return [
+        `Country: ${info.official_name}`,
+        `Region: ${info.region}`,
+        `Capital: ${info.capital}`,
+        `Population: ${info.population}`,
+        `Borders: ${info.borders}`,
+        `Landlocked: ${info.landlocked ? "Yes" : "No"}`,
+        `UN Member: ${info.un_member ? "Yes" : "No"}`,
+        `Map: ${info.maps}`,
+      ].join("\n");
     } catch (e) {
       return `Error looking up country: ${e.message}`;
     }

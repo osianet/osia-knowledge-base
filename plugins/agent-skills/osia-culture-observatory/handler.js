@@ -14,7 +14,10 @@ module.exports.runtime = {
         country: h.countryCode
       }));
       
-      return `### Upcoming Global Observations & Drivers:\n${JSON.stringify(upcoming, null, 2)}`;
+      const formatted = upcoming.map(h =>
+        `- ${h.date} | ${h.name} (${h.localName}) — ${h.country}`
+      ).join("\n");
+      return `Upcoming Global Observations & Drivers:\n${formatted}`;
     } catch (e) {
       return `Error fetching cultural data: ${e.message}`;
     }

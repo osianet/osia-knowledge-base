@@ -10,7 +10,18 @@ module.exports.runtime = {
         return `Failed to fetch intel for IP ${ip_address}: ${data.message}`;
       }
       
-      return JSON.stringify(data);
+      return [
+        `IP: ${data.query}`,
+        `Country: ${data.country} (${data.countryCode})`,
+        `Region: ${data.regionName} (${data.region})`,
+        `City: ${data.city}`,
+        `ZIP: ${data.zip}`,
+        `Coordinates: ${data.lat}, ${data.lon}`,
+        `Timezone: ${data.timezone}`,
+        `ISP: ${data.isp}`,
+        `Organization: ${data.org}`,
+        `AS: ${data.as}`,
+      ].join("\n");
     } catch (e) {
       this.introspect(`${callerId} failed: ${e.message}`);
       this.logger(`${callerId} failed for IP ${ip_address}`, e.message);

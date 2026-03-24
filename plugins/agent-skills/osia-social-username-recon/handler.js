@@ -24,6 +24,11 @@ module.exports.runtime = {
       }
     }
 
-    return JSON.stringify({ target: username, profiles: results }, null, 2);
+    const formatted = results.map(r => {
+      if (r.status === "FOUND") return `- ${r.platform}: FOUND (${r.url})`;
+      if (r.status === "ERROR") return `- ${r.platform}: ERROR — ${r.message}`;
+      return `- ${r.platform}: NOT FOUND`;
+    }).join("\n");
+    return `Username Recon: ${username}\n${formatted}`;
   }
 };
