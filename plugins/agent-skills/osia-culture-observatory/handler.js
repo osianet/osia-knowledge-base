@@ -1,9 +1,8 @@
 module.exports.runtime = {
-  handler: async function ({ date }) {
+  handler: async function () {
     try {
       this.introspect(`Observing global cultural and religious drivers...`);
       // Using a public holiday API (Nager.Date for simplicity/no-key)
-      const year = new Date().getFullYear();
       const response = await fetch(`https://date.nager.at/api/v3/NextPublicHolidaysWorldwide`);
       const data = await response.json();
       

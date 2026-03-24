@@ -16,12 +16,7 @@
   ],
   "entrypoint": {
     "file": "handler.js",
-    "params": {
-      "date": {
-        "description": "Optional: date to check (defaults to today).",
-        "type": "string"
-      }
-    }
+    "params": {}
   },
   "imported": true
 }

@@ -27,7 +27,7 @@
 # Ignore actual MCP plugin configs as they contain API keys
 /plugins/anythingllm_mcp_servers.json
 
-# You can keep track of custom plugins / agent-skills / agent-flows, and mcp configs.node_modules/
+# You can keep track of custom plugins / agent-skills / agent-flows, and mcp configs.
 node_modules/
 __pycache__/
 .venv/

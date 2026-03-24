@@ -6,7 +6,7 @@ module.exports.runtime = {
     const callerId = `${this.config.name}-v${this.config.version}`;
     try {
       this.introspect(`${callerId} writing to shared stash...`);
-      const stashFile = path.join(__dirname, '..', '..', '..', 'osia_shared_stash.txt');
+      const stashFile = path.join(__dirname, '..', '..', 'osia_shared_stash.txt');
       
       const timestamp = new Date().toISOString();
       const content = `\n--- [${timestamp}] ---\n${report}\n`;

@@ -1,7 +1,10 @@
 module.exports.runtime = {
   handler: async function ({ tool, target }) {
     const bridgeUrl = "http://172.20.0.1:8007/cyber/execute";
-    const token = "osia-cyber-secret-2026"; // In a production setup, this would be in an env var
+    const token = process.env.OSIA_CYBER_BRIDGE_TOKEN;
+    if (!token) {
+      return "Failed to connect to OSIA Cyber Bridge: OSIA_CYBER_BRIDGE_TOKEN environment variable is not set.";
+    }
 
     try {
       this.introspect(`Requesting Kali Sandbox to run ${tool} on ${target}...`);
