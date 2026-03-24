@@ -21,7 +21,11 @@ const broadcastToSignal = {
     const { report_title, content } = args;
     const signalApiUrl = "http://172.20.0.1:8081/v2/send";
     const groupId = "group.cHVnV0RjVGlEY2pFeHlPS1ZmSjZibGJZeE9QUE5pZmRxVFREMzdqbndNbz0=";
-    const senderNumber = "[REDACTED]";
+    const senderNumber = process.env.SIGNAL_SENDER_NUMBER;
+
+    if (!senderNumber) {
+      return "Failed to broadcast report: SIGNAL_SENDER_NUMBER environment variable is not set.";
+    }
 
     const message = `🚨 OSIA INTELLIGENCE BROADCAST 🚨\n\nTITLE: ${report_title}\n\n${content}`;
 
