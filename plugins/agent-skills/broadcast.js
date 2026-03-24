@@ -21,7 +21,7 @@ const broadcastToSignal = {
     const { report_title, content } = args;
     const signalApiUrl = "http://172.20.0.1:8081/v2/send";
     const groupId = "group.cHVnV0RjVGlEY2pFeHlPS1ZmSjZibGJZeE9QUE5pZmRxVFREMzdqbndNbz0=";
-    const senderNumber = "+61483840680";
+    const senderNumber = "[REDACTED]";
 
     const message = `🚨 OSIA INTELLIGENCE BROADCAST 🚨\n\nTITLE: ${report_title}\n\n${content}`;
 
