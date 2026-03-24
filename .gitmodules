@@ -1,0 +1,9 @@
+[submodule "mcp/mcp-arxiv"]
+	path = mcp/mcp-arxiv
+	url = https://github.com/blazickjp/arxiv-mcp-server.git
+[submodule "mcp/mcp-semantic-scholar"]
+	path = mcp/mcp-semantic-scholar
+	url = https://github.com/FujishigeTemma/semantic-scholar-mcp.git
+[submodule "mcp/mcp-wikipedia-py"]
+	path = mcp/mcp-wikipedia-py
+	url = https://github.com/automateyournetwork/Wikipedia_MCP.git
