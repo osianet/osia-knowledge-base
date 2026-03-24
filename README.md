@@ -2,7 +2,7 @@
 
 This repository contains the intelligence configuration, context environment, and custom agent skills for the **Open Source Intelligence Agency (OSIA)**. It is designed to be used in conjunction with the primary [osia-framework](https://github.com/osianet/osia-framework) repository.
 
-OSIA operates under the **Decolonial & Socialist Mandate**, functioning as a counter-intelligence force prioritizing anti-imperialism, Indigenous sovereignty, labor rights, and ecological stewardship.
+OSIA operates under a **configurable mission mandate**, which is defined in a Markdown file within the framework. This allows the agency to dynamically adapt its analytical lens across all intelligence desks by synchronizing core directives with agent system prompts.
 
 ## 🗂️ Repository Structure
 
