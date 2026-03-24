@@ -1,0 +1,64 @@
+{
+  "mcpServers": {
+    "arxiv": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/app/server/storage/mcp/mcp-arxiv",
+        "run",
+        "python",
+        "-m",
+        "arxiv_mcp_server"
+      ],
+      "env": {
+        "PYTHONPATH": "/app/server/storage/mcp/mcp-arxiv/src"
+      }
+    },
+    "wikipedia": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/app/server/storage/mcp/mcp-wikipedia-py",
+        "run",
+        "python",
+        "main.py"
+      ]
+    },
+    "tavily": {
+      "command": "node",
+      "args": [
+        "/app/server/storage/mcp/tavily/node_modules/tavily-mcp/dist/index.js"
+      ],
+      "env": {
+        "TAVILY_API_KEY": "YOUR_TAVILY_API_KEY"
+      }
+    },
+    "time": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-time"
+      ]
+    },
+    "semantic-scholar": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/app/server/storage/mcp/mcp-semantic-scholar",
+        "run",
+        "python",
+        "-m",
+        "semantic_scholar_mcp.cli",
+        "serve"
+      ],
+      "env": {
+        "PYTHONPATH": "/app/server/storage/mcp/mcp-semantic-scholar/src"
+      }
+    },
+    "youtube": {
+      "command": "node",
+      "args": [
+        "/app/server/storage/mcp/youtube/node_modules/@fabriqa.ai/youtube-transcript-mcp/index.js"
+      ]
+    }
+  }
+}

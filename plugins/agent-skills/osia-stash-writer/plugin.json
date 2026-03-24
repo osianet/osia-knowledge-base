@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-stash-writer",
+  "name": "OSIA Shared Stash Writer",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Appends a synthesized intelligence report to the shared OSIA stash file for cross-desk collaboration.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Save this report to the shared stash: The target IP 8.8.8.8 belongs to Google.",
+      "call": "{\"report\": \"The target IP 8.8.8.8 belongs to Google and is primarily used for public DNS.\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "report": {
+        "description": "The intelligence summary or data to append to the stash.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

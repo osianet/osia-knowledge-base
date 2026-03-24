@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-cyber-ip-intel",
+  "name": "IP Geolocation & Intel",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Looks up geolocation, ISP, and organization information for an IP address. Critical for Cyber Intelligence & Warfare Desk.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "What can you tell me about the IP address 8.8.8.8?",
+      "call": "{\"ip_address\": \"8.8.8.8\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "ip_address": {
+        "description": "The IPv4 or IPv6 address to look up.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

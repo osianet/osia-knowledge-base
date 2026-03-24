@@ -1,0 +1,30 @@
+# AnythingLLM local state and databases
+*.db
+*.db-shm
+*.db-wal
+
+# Vector databases and caches
+/lancedb/
+/vector-cache/
+
+# Uploads and intelligence documents
+/documents/
+
+# Model binaries
+/models/
+
+# Sensitive keys and config
+/comkey/
+.env
+
+# Temporary or runtime files
+/tmp/
+/push-notifications/
+
+# Assets (user uploaded images, etc)
+/assets/
+
+# Ignore actual MCP plugin configs as they contain API keys
+/plugins/anythingllm_mcp_servers.json
+
+# You can keep track of custom plugins / agent-skills / agent-flows, and mcp configs.

@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-finance-stock-intel",
+  "name": "Finance Stock Market Intel",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Fetches current stock ticker market data to analyze capital flows and market conditions.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "What is the current stock price and volume for TSLA?",
+      "call": "{\"ticker\": \"TSLA\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "ticker": {
+        "description": "The stock ticker symbol (e.g., AAPL, TSLA).",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}
