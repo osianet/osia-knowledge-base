@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-culture-observatory",
+  "name": "OSIA Cultural Observatory",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Checks for current world holidays and religious observances to provide sociological context.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Are there any major religious or cultural events happening today that might drive local sentiment?",
+      "call": "{\"date\": \"today\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "date": {
+        "description": "Optional: date to check (defaults to today).",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

@@ -1,0 +1,35 @@
+{
+  "active": true,
+  "hubId": "osia-cyber-kali-tools",
+  "name": "Kali Linux Sandbox Tools",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Executes whitelisted network reconnaissance tools (nmap, whois, dig, ping) inside a secure Kali Linux sandbox. ONLY use for legitimate intelligence verification.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Can you run a port scan on 8.8.8.8 to see what services are exposed?",
+      "call": "{\"tool\": \"nmap\", \"target\": \"8.8.8.8\"}"
+    },
+    {
+      "prompt": "Look up the WHOIS records for google.com.",
+      "call": "{\"tool\": \"whois\", \"target\": \"google.com\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "tool": {
+        "description": "The tool to run: 'nmap', 'whois', 'dig', or 'ping'.",
+        "type": "string"
+      },
+      "target": {
+        "description": "The target IP address or domain name.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

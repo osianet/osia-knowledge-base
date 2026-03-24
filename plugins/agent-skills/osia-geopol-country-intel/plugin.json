@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-geopol-country-intel",
+  "name": "Geopolitical Country Intel",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Fetches foundational geopolitical data for a specific country (borders, government, population, location).",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Give me a geopolitical briefing on Iran.",
+      "call": "{\"country\": \"Iran\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "country": {
+        "description": "The name of the country to look up.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

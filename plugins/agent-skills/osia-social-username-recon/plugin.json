@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-social-username-recon",
+  "name": "Username Recon (Sherlock-Lite)",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Checks major social media platforms to see if a specific username exists. Critical for Human Intelligence profiles.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Can you check if the username 'ghostoperative' exists on any social media?",
+      "call": "{\"username\": \"ghostoperative\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "username": {
+        "description": "The username to search for.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

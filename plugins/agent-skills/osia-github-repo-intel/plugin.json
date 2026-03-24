@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "hubId": "osia-github-repo-intel",
+  "name": "GitHub Repo Intelligence",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Fetches technical metadata for any GitHub repository to analyze software capabilities and health.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Can you get some intel on the 'osia-framework' repository?",
+      "call": "{\"repo_path\": \"osianet/osia-framework\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "repo_path": {
+        "description": "The path to the repo (owner/repo_name).",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

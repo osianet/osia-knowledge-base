@@ -1,0 +1,31 @@
+{
+  "active": true,
+  "hubId": "osia-report-broadcast",
+  "name": "OSIA Intelligence Broadcast",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Broadcasts a finished intelligence report or update to the OSIA Briefings Signal group.",
+  "author": "OSIA",
+  "license": "MIT",
+  "setup_args": {},
+  "examples": [
+    {
+      "prompt": "Broadcast this report: The target is moving north.",
+      "call": "{\"report_title\": \"Target Status\", \"content\": \"The target is moving north.\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "report_title": {
+        "description": "The title of the report.",
+        "type": "string"
+      },
+      "content": {
+        "description": "The full report content.",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}

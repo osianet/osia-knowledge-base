@@ -1,0 +1,22 @@
+module.exports.runtime = {
+  handler: async function ({ date }) {
+    try {
+      this.introspect(`Observing global cultural and religious drivers...`);
+      // Using a public holiday API (Nager.Date for simplicity/no-key)
+      const year = new Date().getFullYear();
+      const response = await fetch(`https://date.nager.at/api/v3/NextPublicHolidaysWorldwide`);
+      const data = await response.json();
+      
+      const upcoming = data.slice(0, 10).map(h => ({
+        date: h.date,
+        name: h.name,
+        localName: h.localName,
+        country: h.countryCode
+      }));
+      
+      return `### Upcoming Global Observations & Drivers:\n${JSON.stringify(upcoming, null, 2)}`;
+    } catch (e) {
+      return `Error fetching cultural data: ${e.message}`;
+    }
+  }
+};
